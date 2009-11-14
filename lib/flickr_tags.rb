@@ -26,7 +26,9 @@ EOS
     if attr[:set]
       get_flickr_iframe user, 'set_id', attr[:set].strip
     elsif attr[:tags]
-      get_flickr_iframe user, 'tags', attr[:tags].strip
+      tags = attr[:tags].strip
+      tags = tag.locals.page.slug if tags == '=slug'
+      get_flickr_iframe user, 'tags', tags.strip
     else
       raise StandardError.new("Please provide a Flickr set ID in the flickr:slideshow tag's `set` attribute or a comma-separated list of Flickr tags in the `tags` attribute")
     end

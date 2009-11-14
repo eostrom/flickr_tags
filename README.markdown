@@ -28,6 +28,10 @@ You can combine tags into a comma-separated list to get photos that match _all_ 
 
     <r:flickr:slideshow user="10622160@N00" tags="portfolio,2005"/>
 
+If the `tags` attribute is set to `=slug`, then the current page's slug will be used as a tag to search for:
+
+    <r:flickr:slideshow user="10622160@N00" tags="=slug"/>
+
 You can also create a slideshow from a photoset by replacing the `tags` attribute with the `set` attribute. First, get the set ID from the photoset URL. For example, if the photoset has the URL
 
     http://www.flickr.com/photos/10622160@N00/sets/548374/
