@@ -36,6 +36,8 @@ the set ID is `548374`. Then, specify the set ID in the `flickr:slideshow` tag
 
     <r:flickr:slideshow user="10622160@N00" set="548374"/>
 
+To change the default size of the slideshow `iframe`, set `Radiant::Config['flickr_tags.slideshow.default_size']` to a number.
+
 `flickr:photos`
 ===============
 The `flickr:photos` tag and its related tags embed individual photos. For example,
